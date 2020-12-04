@@ -6,7 +6,9 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import messaging from '@react-native-firebase/messaging';
+
+import React, { useEffect } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -25,6 +27,38 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
+
+  async function requestUserPermission() {
+
+    const authStatus = await messaging().requestPermission();
+    const enabled =
+      authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
+      authStatus === messaging.AuthorizationStatus.PROVISIONAL;
+
+    console.warn(enabled)
+
+    if (enabled) {
+      console.warn('Authorization status:', authStatus);
+      const token = await messaging().getToken();
+      console.log(token)
+    }
+  }
+
+  useEffect(() => {
+    messaging().setBackgroundMessageHandler(async remoteMessage => {
+      console.log('Message handled in the background!', remoteMessage);
+    });
+    const unsubscribe = messaging().onMessage(async remoteMessage => {
+      Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+    });
+
+    return unsubscribe;
+  }, []);
+
+  useEffect(() => {
+    requestUserPermission();
+  }, [])
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
