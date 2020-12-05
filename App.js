@@ -40,7 +40,7 @@ const App: () => React$Node = () => {
     if (enabled) {
       console.warn('Authorization status:', authStatus);
       const token = await messaging().getToken();
-      console.log(token)
+      console.warn(token)
     }
   }
 
