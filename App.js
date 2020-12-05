@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import messaging from '@react-native-firebase/messaging';
+import messaging, { firebase } from '@react-native-firebase/messaging';
 
 import React, { useEffect } from 'react';
 import {
@@ -28,6 +28,7 @@ import {
 
 const App: () => React$Node = () => {
 
+  // firebase
   async function requestUserPermission() {
 
     const authStatus = await messaging().requestPermission();
@@ -44,6 +45,7 @@ const App: () => React$Node = () => {
     }
   }
 
+  // firebase
   useEffect(() => {
     messaging().setBackgroundMessageHandler(async remoteMessage => {
       console.log('Message handled in the background!', remoteMessage);
