@@ -16,6 +16,7 @@ import {
   View,
   Text,
   StatusBar,
+  Alert
 } from 'react-native';
 
 import {
@@ -51,7 +52,9 @@ const App: () => React$Node = () => {
       console.log('Message handled in the background!', remoteMessage);
     });
     const unsubscribe = messaging().onMessage(async remoteMessage => {
-      Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+
+      const { body } = remoteMessage.notification;
+      Alert.alert('A new FCM message arrived!', body);
     });
 
     return unsubscribe;

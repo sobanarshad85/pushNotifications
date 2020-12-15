@@ -1,34 +1,78 @@
 {
   "project_info": {
-    "project_number": "475099275578",
-    "project_id": "testnotifications-36f3a",
-    "storage_bucket": "testnotifications-36f3a.appspot.com"
+    "project_number": "1066375251541",
+    "firebase_url": "https://doorhubdriverapp.firebaseio.com",
+    "project_id": "doorhubdriverapp",
+    "storage_bucket": "doorhubdriverapp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:475099275578:android:781adef62e6e6635fe3003",
+        "mobilesdk_app_id": "1:1066375251541:android:ccd6378d8ad7c34b",
         "android_client_info": {
-          "package_name": "com.pushnotifications"
+          "package_name": "com.doorhub"
         }
       },
       "oauth_client": [
         {
-          "client_id": "475099275578-nc5lkldgv3u4rclc48om2ojpro6g2jnn.apps.googleusercontent.com",
+          "client_id": "1066375251541-f0djrviq01320ru51d9fj33h74bn6p6m.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyATdHZJhR7FJn8hhp5zikJQoTeEN5T4bz4"
+          "current_key": "AIzaSyBLv9PIj19Rs-guSviF_tkjEvZT29o_BpQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "475099275578-nc5lkldgv3u4rclc48om2ojpro6g2jnn.apps.googleusercontent.com",
+              "client_id": "1066375251541-f0djrviq01320ru51d9fj33h74bn6p6m.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1066375251541-r5q9r4rgmqv019inb9m0a6es0mnacof5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.pushNotificationss"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066375251541:android:f9ad8eb458db81799a76dc",
+        "android_client_info": {
+          "package_name": "com.pushnotifications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066375251541-f0djrviq01320ru51d9fj33h74bn6p6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLv9PIj19Rs-guSviF_tkjEvZT29o_BpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066375251541-f0djrviq01320ru51d9fj33h74bn6p6m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1066375251541-r5q9r4rgmqv019inb9m0a6es0mnacof5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.pushNotificationss"
+              }
             }
           ]
         }
